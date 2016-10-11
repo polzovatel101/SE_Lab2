@@ -6,22 +6,19 @@
 using namespace std;
 #include "CWindow.h"
 
-
+    /**
+     * getter для поля idWindow
+     */
     int CWindow::getIdWindow() {
         return idWindow;
     }
-
 
     /**
      * Конструктор без параметров
      * @return
      */
-	CWindow::CWindow() {
+	CWindow::CWindow(): positionX1(0),  positionX2(0), positionY1(0), positionY2(0) {
         idWindow = 2148;
-		positionX1 = 0;
-		positionX2 = 0;
-		positionY1 = 0;
-		positionY2 = 0;
     }
 
 	/**
@@ -29,12 +26,9 @@ using namespace std;
 	* @param positionX1 Начальная точка по оси Х
 	* @return
 	*/
-	CWindow::CWindow(const int positionX1) {
+	CWindow::CWindow(const int positionX1): positionX2(0), positionY1(0), positionY2(0)  {
         idWindow = 2149;
         this->positionX1 = positionX1;
-        positionX2 = 0;
-        positionY1 = 0;
-        positionY2 = 0;
     }
 
 	/**
@@ -43,12 +37,10 @@ using namespace std;
 	* @param positionX2 Конечная точка по оси Х
 	* @return
 	*/
-	CWindow::CWindow(const int positionX1, int positionX2) {
+	CWindow::CWindow(const int positionX1, int positionX2): positionY1(0), positionY2(0) {
         idWindow = 2150;
         this->positionX1 = positionX1;
         this->positionX2 = positionX2;
-        positionY1 = 0;
-        positionY2 = 0;
     }
 
 	/**
@@ -58,12 +50,11 @@ using namespace std;
 	* @param positionY1 Начальная точка по оси Y
 	* @return
 	*/
-	CWindow::CWindow(const int positionX1, int positionX2, int positionY1) {
+	CWindow::CWindow(const int positionX1, int positionX2, int positionY1):positionY2(0)  {
         idWindow = 2151;
         this->positionX1 = positionX1;
         this->positionX2 = positionX2;
         this->positionY1 = positionY1;
-        positionY2 = 0;
     }
 
 	/**
